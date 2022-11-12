@@ -1,0 +1,63 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "NiteCode",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#attribute"
+		}		
+	],
+	"fileTypes": [
+		".nite",
+		".nitec",
+		".nitecode"
+	],
+	"repository": {
+		"attribute":{
+			"name": "entity.other.attribute-name",
+			"begin": "@",
+			"end": ";"
+		},
+		"comments": {
+			"patterns": [
+				{
+					"begin": "//",
+					"captures": {
+						"0": {
+							"name": "comment.block.documentation.nitecode"
+						}
+					},
+					"name": "comment.block.documentation.nitecode",
+					"end": "(\r|\r\n|\n)"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.nitecode",
+				"match": "\\b(if|while|for|ref|return|static|sizeof|struct|generic|nongeneric|readonly|i32|u32|i16|u16|i8|u8|i64|u64|public|private|protected|attribute|bool|using|define|namespace)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.nitecode",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nitecode",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"firstLineMatch": "\\b(using.*;|define.*;namespace.*;)b",
+	"scopeName": "source.nitecode"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "nitecode",
+  "displayName": "NiteCode",
+  "repository": {
+    "url": "https://github.com/NiTiS-Dev/NiteCodeVSCode.git",
+    "type": "git"
+  },
+  "description": "NiteCode syntax highlighter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nitecode",
+      "aliases": ["NiteCode", "nitecode"],
+      "extensions": [".nite", ".nitec", ".nitecode"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nitecode",
+      "scopeName": "source.nitecode",
+      "path": "./syntaxes/nitecode.tmLanguage.json"
+    }]
+  }
+}
