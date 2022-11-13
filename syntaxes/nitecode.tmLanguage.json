@@ -43,7 +43,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.nitecode",
-				"match": "\\b(if|while|for|once|ref|return|static|sizeof|struct|generic|nongeneric|readonly|i32|u32|i16|u16|i8|u8|i64|u64|public|private|protected|attribute|bool|using|define|namespace|void|ptr)\\b"
+				"match": "\\b(if|while|for|once|new|default|delegate|ref|return|const|static|sizeof|struct|generic|nongeneric|readonly|i32|u32|i16|u16|i8|u8|i64|u64|public|private|protected|attribute|bool|using|define|namespace|void|ptr)\\b"
 			}]
 		},
 		"strings": {
