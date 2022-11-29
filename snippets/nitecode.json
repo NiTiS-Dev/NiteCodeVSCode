@@ -1,0 +1,29 @@
+{
+    "main": {
+        "prefix": ["main", "psvm"],
+        "body": [
+            "public static void main(string[] args) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create program's entry point"
+    },
+    "Type constructor": {
+        "prefix": ["ctor", "constructor"],
+        "body": [
+            "public::ctor(${1:void}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Type constructor"
+    },
+    "Method": {
+        "prefix": ["meth"],
+        "body": [
+            "public ${1:void} ${0:methodName}(${2:void}) {",
+            "\t$3",
+            "}"
+        ],
+        "description": "Create method"
+    }
+}
